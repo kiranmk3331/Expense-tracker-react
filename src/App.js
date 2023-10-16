@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import Expenses from "./components/Expenses/Expenses";
+import NewExpense from "./components/NewExpense/NewExpense";
 
 const DUMMY_EXPENSES = [
   {
@@ -44,8 +45,13 @@ const DUMMY_EXPENSES = [
 function App() {
   const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
 
+  const onFormSubmit = (NewExpense) => {
+    setExpenses((prevExpenses) => [NewExpense, ...prevExpenses]);
+  };
+
   return (
     <div className="App">
+      <NewExpense onSubmit={onFormSubmit} />
       <Expenses expenses={expenses} />
     </div>
   );
