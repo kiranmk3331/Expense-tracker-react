@@ -1,0 +1,17 @@
+.expense-filter {
+  padding: 0 1rem;
+}
+
+.expense-filter__control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.year-select {
+  font: inherit;
+  padding: 0.5rem 3rem;
+  border-radius: 6px;
+  font-weight: 700;
+}
