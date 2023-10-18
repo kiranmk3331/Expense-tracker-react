@@ -4,8 +4,8 @@ import ExpenseForm from "./ExpenseForm";
 
 const NewExpense = ({ onSubmit }) => {
   return (
-    <div className="new-expense" onSubmit={onSubmit}>
-      <ExpenseForm />
+    <div className="new-expense">
+      <ExpenseForm onSubmit={onSubmit} />
     </div>
   );
 };
