@@ -59,6 +59,8 @@ const ExpenseForm = ({ onSubmit }) => {
             type="date"
             name="date"
             placeholder="Date"
+            min="2017-01-01"
+            max={new Date().toJSON().split("T")[0]}
             value={date}
             required
             onChange={(e) => setDate(e.target.value)}
