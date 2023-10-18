@@ -21,6 +21,7 @@ const ExpenseFilter = ({ selectHandler, selectedYear }) => {
           onChange={selectHandler}
           value={selectedYear}
         >
+          <option value="">All</option>
           {yearArray.map((year) => (
             <option value={year} key={year}>
               {year}

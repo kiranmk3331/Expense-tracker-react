@@ -15,7 +15,7 @@ const Expenses = ({ expenses }) => {
         selectHandler={selectYearHandler}
         selectedYear={selectedYear}
       />
-      <ExpenseList expenses={expenses} />
+      <ExpenseList expenses={expenses} selectedYear={selectedYear} />
     </div>
   );
 };
