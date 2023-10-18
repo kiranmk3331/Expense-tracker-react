@@ -6,11 +6,15 @@ import { filterExpenses } from "../Utils/helperFunctions";
 const ExpenseList = ({ expenses, selectedYear }) => {
   const filteredExpenses = filterExpenses(expenses, selectedYear);
 
+  let noExpenseContent = <p>No expense found on this year</p>;
+
   return (
     <>
-      {filteredExpenses.map((expense) => (
-        <ExpenseItem key={expense.id} {...expense} />
-      ))}
+      {filteredExpenses.length > 0
+        ? filteredExpenses.map((expense) => (
+            <ExpenseItem key={expense.id} {...expense} />
+          ))
+        : noExpenseContent}
     </>
   );
 };
