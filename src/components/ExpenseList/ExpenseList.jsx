@@ -6,7 +6,9 @@ import { filterExpenses } from "../Utils/helperFunctions";
 const ExpenseList = ({ expenses, selectedYear }) => {
   const filteredExpenses = filterExpenses(expenses, selectedYear);
 
-  let noExpenseContent = <p>No expense found on this year</p>;
+  let noExpenseContent = (
+    <p className="no-expense">No expense found on this year</p>
+  );
 
   return (
     <>
